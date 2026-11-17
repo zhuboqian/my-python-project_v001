@@ -1,0 +1,14 @@
+{
+    "baseline": 0.12,
+    "focal_length": 1310.78,
+    "principal_point": [
+        960.8,
+        623.4
+    ],
+    "image_size": [
+        1920,
+        1200
+    ],
+    "reprojection_error": 0.0958,
+    "note": "ZED\u53cc\u76ee\u76f8\u673a\u6807\u5b9a\u7ed3\u679c\uff0c\u57fa\u7ebf120.1mm\uff0c\u5206\u8fa8\u73871920x1200"
+}

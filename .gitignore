@@ -1,0 +1,69 @@
+# 默认不迁移当前工作目录中的历史实验、数据和生成物。
+# 只有下面显式列出的核心代码及直接依赖会进入 GitHub。
+/*
+
+# 仓库说明
+!/.gitignore
+!/README.md
+
+# 代码审计清单
+!/backups/
+/backups/*
+!/backups/single_target_20261117/
+/backups/single_target_20261117/*
+!/backups/single_target_20261117/CODE_INVENTORY.md
+!/backups/single_target_20261117/CODE_INVENTORY.csv
+
+# 采集与标定（清单标记为“保留/禁止删除”）
+!/calibration.py
+!/extract_selected_stereo_frames.py
+!/extract_stereo_frames.py
+!/stereo_video_imu_recorder.py
+!/stereo_video_recorder.py
+!/takephotos.py
+!/takephotos_withdistance.py
+
+# 小型标定配置；大型 pickle 文件不迁移
+!/calib.json
+!/stereo_calibration.npz
+
+# 当前核心检测、定位、多目标评估及最终训练代码
+!/yolo_related/
+/yolo_related/*
+!/yolo_related/evaluate_multi_target_detection.py
+!/yolo_related/sweep_multi_target_inference.py
+!/yolo_related/compare_dynamic_stereo_matching.py
+!/yolo_related/estimate_target_xyz_left_camera.py
+!/yolo_related/model_f_pipeline.py
+!/yolo_related/multi_target_tracker.py
+!/yolo_related/my_modules.py
+!/yolo_related/realtime_positioning.py
+!/yolo_related/register_spdconv.py
+!/yolo_related/build_independent_3domain_split_v2.py
+!/yolo_related/finalize_independent_dataset_suite_v2.py
+!/yolo_related/train_final_abcd_independent_v2.py
+!/yolo_related/train_final_abcd_single_independent_v2.py
+
+# 最终训练脚本直接引用的网络结构
+!/yolo_related/yolov8_orignial.yaml
+!/yolo_related/yolov8_p2_only.yaml
+!/yolo_related/yolov8_designed.yaml
+!/yolo_related/yolov8_p2_illumination_gate_h.yaml
+
+# 当前检测管线读取的小型结果配置
+!/yolo_related/metrics_all.json
+
+# 即使位于白名单目录中也不迁移这些本地文件
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pt
+*.pth
+*.onnx
+*.engine
+*.pkl
+*.whl
+*.so
+*.log
+*~
