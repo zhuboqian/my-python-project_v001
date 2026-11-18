@@ -15,6 +15,7 @@
 !/backups/single_target_20261117/CODE_INVENTORY.csv
 
 # 采集与标定（清单标记为“保留/禁止删除”）
+!/AerialRecoveryDegradation.py
 !/calibration.py
 !/extract_selected_stereo_frames.py
 !/extract_stereo_frames.py
